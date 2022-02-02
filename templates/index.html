@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<!-- la page principale -->
+
+{% block head %}
+<title>player classifier</title>
+{% endblock %}
+
+{% block body %}
+<form action="/" method="post">
+    <h1>Conseilleur Des Investisseurs</h1>
+    <h3>Entrer les stats de votre joueur</h3>
+    <input name="name"type="text" id ="name"placeholder="name" />
+    <input name="GP"  type="number" id= "GP"  placeholder="Games Played" required />
+    <input name="MIN" type="text" id ="MIN" placeholder="Minutes Played" required/>
+    <input name="PTS" type="text" id ="PTS" placeholder="Points per Game" required/>
+    <input name="FGM" type="text" id ="FGM" placeholder="Field Goals Made" required/>
+    <input name="FGA" type="text" id ="FGA" placeholder="Field Goals Attempts" required/>
+    <input name="FGP" type="text" id ="FGP" placeholder="Field Goals Percent" required/>
+    <input name="TPM" type="text" id ="3PM" placeholder="3 Points Made" required/>
+    <input name="TPA" type="text" id ="3PA" placeholder="3 Points Attempts" required/>
+    <input name="TPP" type="text" id ="3PP" placeholder="3 Points Percent" required/>
+    <input name="FTM" type="text" id ="FTM" placeholder="Free Throw made" required/>
+    <input name="FTA" type="text" id ="FTA" placeholder="Free Throw Attempts" required/>
+    <input name="FTP" type="text" id ="FTP" placeholder="Free Throw Percent" required/>
+    <input name="OREB"type="text" id ="OREB"placeholder="Offensive Rebounds" required/>
+    <input name="DREB"type="text" id ="DREB"placeholder="Deffensive Rebounds " required/>
+    <input name="REB" type="text" id ="REB" placeholder=" Rebounds" required/>
+    <input name="AST" type="text" id ="AST" placeholder=" Assists" required/>
+    <input name="STL" type="text" id ="STL" placeholder=" Steals" required/>
+    <input name="BLK" type="text" id ="BLK" placeholder="Blocks" required/>
+    <input name="TOV" type="text" id ="TOV" placeholder="Turn Overs" required/>
+    <button type="submit" id="login-button">Predict</button>
+  </form>
+<h1>{{name + outcome}}</h1>
+{% endblock %}
